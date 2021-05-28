@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập JS buổi 7 - Thái Duy Khang</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+                <div class="infomation row align-items-center p-1">
+                    <div class="avatar col-3">
+                        <a class="navbar-brand" href="https://fb.com/thaikhang.royal"><img src="./img/avatar.jpg"></a>
+                    </div>
+                    <div class="name col-8 ml-2">
+                        <p><a href="https://fb.com/thaikhang.royal">Thái Duy Khang</a></p>
+                        <p>Bootcamp 10</p>
+                    </div>    
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a href="#bai-1" class="nav-link">Bài 1</a>
+                    <a class="nav-link" href="#bai-2">Bài 2</a>
+                    <a class="nav-link" href="#bai-3">Bài 3</a>
+                    <a class="nav-link" href="#bai-4">Bài 4</a>
+                    <a class="nav-link" href="#bai-5">Bài 5</a>
+                    <a class="nav-link" href="#bai-6">Bài 6</a>
+                    <a class="nav-link" href="#bai-7">Bài 7</a>
+                    <a class="nav-link" href="#bai-8">Bài 8</a>
+                    <a class="nav-link" href="#bai-9">Bài 9</a>
+                    <a class="nav-link" href="#bai-10">Bài 10</a>
+                </div>
+                </div>
+            </nav>
+        </div>
+    <hr>
+</header>
+
+<section class="practice">
+    <div class="container">
+        <div class="row py-3">
+            <div class="col-3 pr-5" id="sticky-sidebar">
+                <div class="sticky-top">
+                    <div class="nav flex-column align-items-center justify-content-center">
+                        <div class="infomation row align-items-center p-1">
+                            <div class="avatar col-3">
+                                <a class="navbar-brand" href="https://fb.com/thaikhang.royal"><img src="./img/avatar.jpg"></a>
+                            </div>
+                            <div class="name col-8 ml-2">
+                                <p><a href="https://fb.com/thaikhang.royal">Thái Duy Khang</a></p>
+                                <p>Bootcamp 10</p>
+                            </div>    
+                        </div>
+                        <a href="#bai-1" class="nav-link">Bài 1</a>
+                        <a href="#bai-2" class="nav-link">Bài 2</a>
+                        <a href="#bai-3" class="nav-link">Bài 3</a>
+                        <a href="#bai-4" class="nav-link">Bài 4</a>
+                        <a href="#bai-5" class="nav-link">Bài 5</a>
+                        <a href="#bai-6" class="nav-link">Bài 6</a>
+                        <a href="#bai-7" class="nav-link">Bài 7</a>
+                        <a href="#bai-8" class="nav-link">Bài 8</a>
+                        <a href="#bai-9" class="nav-link">Bài 9</a>
+                        <a href="#bai-10" class="nav-link">Bài 10</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="list-pactice col pl-3">
+            <div id="bai-1" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 1 - <span class="description">In một bảng số từ 1-100 (10 hàng liên tiếp & 10 cột cách nhau 10)</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <button onclick="tableNumber()">In bảng</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="printTableNumber" style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>  
+            <div id="bai-2" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 2 - <span class="description">Nhập dãy số "n" và tìm số nguyên tố</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <span>n =</span>
+                        <input type="text" value="1,2,3,4,5,6,7,8,9,10" id="prime">
+                        <button onclick="addPrime()">Thêm</button>
+                        <button onclick="filterPrime()">Tìm</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="printFilterPrime" style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>  
+            <hr>
+            <div id="bai-3" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 3 - <span class="description">Nhập "n" và tính S = (2+3+4...+n) + 2n</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <span>n = </span>
+                        <input type="text" id="parameterN"/>
+                        <button onclick="sumN()">Tính</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="printCountN" style="font-weight:600;"></p>
+                    </div>          
+                </div>
+            </div>
+            <hr>
+            <div id="bai-4" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 4 - <span class="description">Nhập "n" và tính số lượng ước số của n</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <span>n = </span>
+                        <input type="text" id="divisorN" />
+                        <button onclick="countSivisor()">Tính</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="totalDivisorN" style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>  
+            <hr>
+            <div id="bai-5" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 5 - <span class="description">Nhập dãy số nguyên dương "n" và đảo ngược dãy số</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <span>n = </span>
+                        <input type="text" id="interger" value="123456789"/>
+                        <button onclick="RevertInteger()">Đảo ngược</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="printRevert" style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="bai-6" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 6 - <span class="description">Tìm "n" lớn nhất thoả điều kiện (1+2+3+..+n) <= 100</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <button onclick="findNMax()">Hiển thị kết quả</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="printFindNMax"  style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>    
+            <hr>
+            <div id="bai-7" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 7 - <span class="description">Nhập "n" và in ra bảng cửu chương tương ứng</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <span>n = </span>
+                        <input type="text" id="multiNumber">
+                        <button onclick="multiplicationTable()">In</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id="printMultiplicationTable"  style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>
+            <hr>    
+            <div id="bai-8" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 8 - <span class="description">Viết hàm chia bài cho 4 người chơi</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-6">
+                        <button onclick="">Chia bài</button>
+                    </div>
+                    <div class="right col-6">
+                        <p id=""  style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>    
+            <hr>
+            <div id="bai-9" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 9 - <span class="description">Nhập "m" là tổng số chó và gà, n là tổng số chân, tìm số con gà và chó</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-8">
+                        <input type="text" id="sumAnimal" placeholder="Nhập tổng chó & gà"><input type="text" id="legAnimal" placeholder="Nhập số chân">
+                        <button onclick="">Tìm</button>
+                    </div>
+                    <div class="right col-4">
+                        <p id=""  style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>    
+            <hr>
+            <div id="bai-10" class="pt-2">
+                <div class="tile mt-5 mb-4">
+                    <h3>BÀI 10 - <span class="description">Nhập số giờ và số phút, tìm góc độ giữa kim giờ và kim phút</span></h3>
+                </div>
+                <div class="content row justify-content-center align-items-center">
+                    <div class="left col-8">
+                        <input type="text" id="hour" placeholder="Nhập số giờ (0-12)"><input type="text" id="minutes" placeholder="Nhập số phút (0-60)">
+                        <button onclick="angleBetweenHoursAndMinutes()">Tính</button>
+                    </div>
+                    <div class="right col-4">
+                        <p id="printAngle"  style="font-weight:600;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</section>
+    <script src="./js/songuyento.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script>
+    window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth'
+    });
+    </script>
+</body>
+</html>
