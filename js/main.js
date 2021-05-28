@@ -16,7 +16,7 @@ for (var i = 0; i < 10; i++) {
 }
 
 console.log(table);
-getEle("printTableNumber").innerHTML = "Ctrl + Shift + I" + "<br>" + "=> Tab console => Xem kết quả bài 1";
+getEle("printTableNumber").innerHTML = "Vui lòng nhấn Ctrl + Shift + I" + "<br>" + Chọn tab console để xem kết quả bài 1";
 getEle("printTableNumber").style.color = "#4463b9";
 }
 // }
@@ -111,7 +111,7 @@ function multiplicationTable(){
     for(i = 1; i <= 9; i++) {
     result = multiplicationNumber * i + "\n" ;
     console.log(multiplicationNumber + "x" + i + " = " + result);
-		getEle("printMultiplicationTable").innerHTML = "Ctrl + Shift + I" + "<br>" + "=> Tab console => Xem kết quả bài 7";
+		getEle("printMultiplicationTable").innerHTML = "Vui lòng nhấn Ctrl + Shift + I" + "<br>" + Chọn tab console để xem kết quả bài 7";
     getEle("printMultiplicationTable").style.color = "#4463b9";
 	}
 } 
