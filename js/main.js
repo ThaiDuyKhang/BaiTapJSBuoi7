@@ -4,23 +4,21 @@ function getEle(id) {
 
 
 /////////// bài 1////////////////////
-//Tạo biến bảng = rỗng
 function tableNumber(){
-var table = "";
+var arrTableNumber = [];
+var result = "";
 
 for (var i = 0; i < 10; i++) {
   for (var k = 1; k <= 10; k++) {
-    table += i * 10 + k + " ";
+    result += i * 10 + k + " ";
   }
-  table += "\n";
+  result += "<br>"; 
 }
 
-console.log(table);
-getEle("printTableNumber").innerHTML = "Vui lòng nhấn Ctrl + Shift + I" + "<br>" + "Chọn tab console để xem kết quả bài 1";
+arrTableNumber.push(result); 
+getEle("printTableNumber").innerHTML = arrTableNumber.join("");
 getEle("printTableNumber").style.color = "#4463b9";
 }
-// }
-
 
 ///////////// bài 2 //////////////////
 var listPrime = [];
@@ -104,6 +102,7 @@ function findNMax() {
   }
 
 ///////////////////// bài 7 //////////////////
+
 function multiplicationTable(){
   var arrMultiNumber = [];
   var multiNumber = getEle("multiNumber").value;

@@ -24,18 +24,31 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a href="#bai-1" class="nav-link">Bài 1</a>
-                    <a class="nav-link" href="#bai-2">Bài 2</a>
-                    <a class="nav-link" href="#bai-3">Bài 3</a>
-                    <a class="nav-link" href="#bai-4">Bài 4</a>
-                    <a class="nav-link" href="#bai-5">Bài 5</a>
-                    <a class="nav-link" href="#bai-6">Bài 6</a>
-                    <a class="nav-link" href="#bai-7">Bài 7</a>
-                    <a class="nav-link" href="#bai-8">Bài 8</a>
-                    <a class="nav-link" href="#bai-9">Bài 9</a>
-                    <a class="nav-link" href="#bai-10">Bài 10</a>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto flex-wrap flex-row">
+                    <div class="left col-6">
+                        <a href="#bai-1" class="nav-link">Bài 1</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-2">Bài 2</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-3">Bài 3</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-4">Bài 4</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-5">Bài 5</a>
+                        
+                    </div>
+                    <div class="right col-6">
+                        <a class="nav-link" href="#bai-6">Bài 6</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-7">Bài 7</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-8">Bài 8</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-9">Bài 9</a>
+                        <hr>
+                        <a class="nav-link" href="#bai-10">Bài 10</a>
+                    </div>
                 </div>
                 </div>
             </nav>
@@ -78,10 +91,10 @@
                     <h3>BÀI 1 - <span class="description">In một bảng số từ 1-100 (10 hàng liên tiếp & 10 cột cách nhau 10)</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-6">
                         <button onclick="tableNumber()">In bảng</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-6">
                         <p id="printTableNumber" style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -91,13 +104,13 @@
                     <h3>BÀI 2 - <span class="description">Nhập dãy số "n" và tìm số nguyên tố</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-7">
                         <span>n =</span>
                         <input type="text" value="1,2,3,4,5,6,7,8,9,10" id="prime">
                         <button onclick="addPrime()">Thêm</button>
                         <button onclick="filterPrime()">Tìm</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-5">
                         <p id="printFilterPrime" style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -108,12 +121,12 @@
                     <h3>BÀI 3 - <span class="description">Nhập "n" và tính S = (2+3+4...+n) + 2n</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-6">
                         <span>n = </span>
                         <input type="text" id="parameterN"/>
                         <button onclick="sumN()">Tính</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-6">
                         <p id="printCountN" style="font-weight:600;"></p>
                     </div>          
                 </div>
@@ -124,12 +137,12 @@
                     <h3>BÀI 4 - <span class="description">Nhập "n" và tính số lượng ước số của n</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-6">
                         <span>n = </span>
                         <input type="text" id="divisorN" />
                         <button onclick="countSivisor()">Tính</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-6">
                         <p id="totalDivisorN" style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -140,12 +153,12 @@
                     <h3>BÀI 5 - <span class="description">Nhập dãy số nguyên dương "n" và đảo ngược dãy số</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-7">
                         <span>n = </span>
                         <input type="text" id="interger" value="123456789"/>
                         <button onclick="RevertInteger()">Đảo ngược</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-5">
                         <p id="printRevert" style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -156,10 +169,10 @@
                     <h3>BÀI 6 - <span class="description">Tìm "n" lớn nhất thoả điều kiện (1+2+3+..+n) <= 100</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-7">
                         <button onclick="findNMax()">Hiển thị kết quả</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-5">
                         <p id="printFindNMax"  style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -170,12 +183,12 @@
                     <h3>BÀI 7 - <span class="description">Nhập "n" và in ra bảng cửu chương tương ứng</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-7">
                         <span>n = </span>
                         <input type="text" id="multiNumber">
                         <button onclick="multiplicationTable()">In</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-5">
                         <p id="printMultiTable"  style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -186,10 +199,10 @@
                     <h3>BÀI 8 - <span class="description">Viết hàm chia bài cho 4 người chơi</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-6">
+                    <div class="left col-sm-12 col-md-7">
                         <button onclick="">Chia bài</button>
                     </div>
-                    <div class="right col-6">
+                    <div class="right col-sm-12 col-md-5">
                         <p id=""  style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -200,11 +213,11 @@
                     <h3>BÀI 9 - <span class="description">Nhập "m" là tổng số chó và gà, n là tổng số chân, tìm số con gà và chó</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-8">
+                    <div class="left col-md-9 col-sm-12 col-lg-8">
                         <input type="text" id="sumAnimal" placeholder="Nhập tổng chó & gà"><input type="text" id="legAnimal" placeholder="Nhập số chân">
                         <button onclick="">Tìm</button>
                     </div>
-                    <div class="right col-4">
+                    <div class="right col-md-3 col-sm-12 col-lg-4">
                         <p id=""  style="font-weight:600;"></p>
                     </div>
                 </div>
@@ -215,11 +228,11 @@
                     <h3>BÀI 10 - <span class="description">Nhập số giờ và số phút, tìm góc độ giữa kim giờ và kim phút</span></h3>
                 </div>
                 <div class="content row justify-content-center align-items-center">
-                    <div class="left col-8">
+                    <div class="left col-md-9 col-sm-12">
                         <input type="text" id="hour" placeholder="Nhập số giờ (0-12)"><input type="text" id="minutes" placeholder="Nhập số phút (0-60)">
                         <button onclick="angleBetweenHoursAndMinutes()">Tính</button>
                     </div>
-                    <div class="right col-4">
+                    <div class="right col-md-3 col-sm-12 mt-md-3">
                         <p id="printAngle"  style="font-weight:600;"></p>
                     </div>
                 </div>
