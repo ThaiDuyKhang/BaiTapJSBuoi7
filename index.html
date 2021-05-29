@@ -71,17 +71,22 @@
                                 <p>Bootcamp 10</p>
                             </div>    
                         </div>
-                        <a href="#bai-1" class="nav-link">Bài 1</a>
-                        <a href="#bai-2" class="nav-link">Bài 2</a>
-                        <a href="#bai-3" class="nav-link">Bài 3</a>
-                        <a href="#bai-4" class="nav-link">Bài 4</a>
-                        <a href="#bai-5" class="nav-link">Bài 5</a>
-                        <a href="#bai-6" class="nav-link">Bài 6</a>
-                        <a href="#bai-7" class="nav-link">Bài 7</a>
-                        <a href="#bai-8" class="nav-link">Bài 8</a>
-                        <a href="#bai-9" class="nav-link">Bài 9</a>
-                        <a href="#bai-10" class="nav-link">Bài 10</a>
-
+                        <div class="row">
+                            <div class="left col-6">
+                                <a href="#bai-1" class="nav-link">Bài 1</a>
+                                <a href="#bai-2" class="nav-link">Bài 2</a>
+                                <a href="#bai-3" class="nav-link">Bài 3</a>
+                                <a href="#bai-4" class="nav-link">Bài 4</a>
+                                <a href="#bai-5" class="nav-link">Bài 5</a>
+                            </div>
+                            <div class="right col-6">
+                                <a href="#bai-6" class="nav-link">Bài 6</a>
+                                <a href="#bai-7" class="nav-link">Bài 7</a>
+                                <a href="#bai-8" class="nav-link">Bài 8</a>
+                                <a href="#bai-9" class="nav-link">Bài 9</a>
+                                <a href="#bai-10" class="nav-link">Bài 10</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,7 +112,6 @@
                     <div class="left col-sm-12 col-md-7">
                         <span>n =</span>
                         <input type="text" value="1,2,3,4,5,6,7,8,9,10" id="prime">
-                        <button onclick="addPrime()">Thêm</button>
                         <button onclick="filterPrime()">Tìm</button>
                     </div>
                     <div class="right col-sm-12 col-md-5">
@@ -200,10 +204,10 @@
                 </div>
                 <div class="content row justify-content-center align-items-center">
                     <div class="left col-sm-12 col-md-7">
-                        <button onclick="">Chia bài</button>
+                        <button onclick="playCards()">Chia bài</button>
                     </div>
                     <div class="right col-sm-12 col-md-5">
-                        <p id=""  style="font-weight:600;"></p>
+                        <p id="players"  style="font-weight:600;"></p>
                     </div>
                 </div>
             </div>    

@@ -103,6 +103,12 @@ P {
 .practice .container .nav .infomation .name p:last-child{
     font-size: 13px;
 }
+.practice .container .sticky-top .nav .row .left{
+    padding-right:0.3rem;
+}
+.practice .container .sticky-top .nav .row .right{
+    padding-left:0.3rem;
+}
 .practice .container .sticky-top .nav .nav-link{
     border:none;
     width: 100%;

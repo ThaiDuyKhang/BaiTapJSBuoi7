@@ -21,44 +21,45 @@ getEle("printTableNumber").style.color = "#4463b9";
 }
 
 ///////////// bài 2 //////////////////
-var listPrime = [];
-
-
-  function addPrime() {
-    var prime = getEle("prime").value;
-    var convertedPrime = prime.split(",");
-    for (var i = 0; i < convertedPrime.length; i++) {
-      listPrime.push(parseFloat(convertedPrime[i]));
-    }
-    console.log(listPrime);
-  }
-
-  function filterPrime(prime) {
+function filterPrime() {
     var filterPrime = [];
+    var prime = getEle("prime").value;
+    var flag = true;
 
-    for (var i = 0; i < listPrime.length; i++) {
-        if (listPrime[i] > 2 && prime/prime === 1){
-          filterPrime.push(parseFloat(listPrime[i]));
-        } 
+    if (prime > 2){
+      flag = true;
+    } else {
+        for (var i = 2; i <= parseFloat(prime)/2; i++) {
+          if (prime % i === 0) {
+            flag = false;
+            return;
+          }
+        }
+      filterPrime.push(parseFloat(prime[i]));   
+      console.log(filterPrime);
       }
-    getEle("printFilterPrime").innerHTML = "Số nguyên tố là: " + filterPrime;
+
+    if (flag == true){
+      getEle("printFilterPrime").innerHTML = "Số nguyên tố là: " + filterPrime;
+    }
+    if (flag == false){
+    }
     getEle("printFilterPrime").style.color = "#4463b9";
 }
 
+
 ///////////// bài tập 3 ///////////////
 function sumN() {
-    //Nhập tham số n
     var n = getEle("parameterN").value;
-    //Công thức tính tổng bắt đầu từ 2
     var s = 2;
-    //Vòng lặp tính tổng từ 2 -> n
+    var total;
+
     for (var i = 3; i <= n; i++) {
       s += i;
     }
-    //Lấy tổng vòng lặp cộng với 2n 
+
     total = s + 2 * parseFloat(n);
 
-    //In kết quả
     getEle("printCountN").innerHTML = "Tổng (2 + 3 + 4 +..." + n + ") + 2 * " + n + " = " + total;
     getEle("printCountN").style.color = "#4463b9";
 }
@@ -115,11 +116,30 @@ function multiplicationTable(){
     arrMultiNumber.push(table);
     }
 
-  console.log(arrMultiNumber);
-
   getEle("printMultiTable").innerHTML = arrMultiNumber.join('');
   getEle("printMultiTable").style.color = "#4463b9";
 } 
+
+////////////////// Bài 8 ///////////////////
+function playCards(){
+  var arrOne = [];
+  var arrTwo = [];
+  var arrThree = [];
+  var arrFour = [];
+  var cards = ["4K", "KH", "5C", "KA", "QH", "KD", "2H", "10S",
+  "AS", "7H", "9K", "10D"];
+  for(i = 0; i < cards.length; i+=4){
+    arrOne.push(" " + cards[i]);
+    arrTwo.push( " " + cards[i+1]);
+    arrThree.push( " " + cards[i+2]);
+    arrFour.push( " " + cards[i+3]);
+  }
+  getEle("players").innerHTML = "Player 1: " + arrOne + "<br>" + "Player 2: " + arrTwo + "<br>" + "Player 3: " + arrThree + "<br>" + "Player 4: " + arrFour;
+  getEle("players").style.color = "#4463b9";
+}
+
+
+/////////////////// Bài 9 ////////////////////
 
 /////////////////// Bài 10 ///////////////////
 function angleBetweenHoursAndMinutes(){
