@@ -104,7 +104,6 @@ function findNMax() {
   }
 
 ///////////////////// bài 7 //////////////////
-
 function multiplicationTable(){
   var arrMultiNumber = [];
   var multiNumber = getEle("multiNumber").value;
