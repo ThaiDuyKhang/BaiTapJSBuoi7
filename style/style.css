@@ -228,6 +228,8 @@ button {
     justify-content: center;
     color: rgba(0,0,0,0.7);
     height: 2.5rem;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 4px 4px 10px #bec8e4,-4px -4px 10px #fff;
     box-shadow: 4px 4px 10px #bec8e4,-4px -4px 10px #fff;
     background-color: #e4ebf5;
     transition: box-shadow .1s ease-in-out;
