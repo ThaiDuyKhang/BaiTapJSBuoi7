@@ -157,6 +157,8 @@ input{
     box-sizing: border-box;
     color: rgba(0,0,0,0.7);
     background: #e4ebf5;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset 2px 2px 5px #bec8e4,inset -2px -2px 6px #fff;
     box-shadow: inset 2px 2px 5px #bec8e4,inset -2px -2px 6px #fff;
     transition: box-shadow .2s ease-in-out;
 }
@@ -202,11 +204,15 @@ border-radius: 0.4rem;
 box-sizing: border-box;
 color: rgba(0,0,0,0.7);
 background: #e4ebf5;
+-webkit-appearance: none;
+-webkit-box-shadow: inset 2px 2px 5px #bec8e4,inset -2px -2px 6px #fff;
 box-shadow: inset 2px 2px 5px #bec8e4,inset -2px -2px 6px #fff;
 transition: box-shadow .2s ease-in-out;
 }
 
 input:hover, input:focus{
+-webkit-appearance: none;
+-webkit-box-shadow: inset 1px 1px 2px #bec8e4,inset -1px -1px 2px #fff;
 box-shadow: inset 1px 1px 2px #bec8e4,inset -1px -1px 2px #fff;
 }
 
@@ -231,9 +237,13 @@ button {
 }
 
 button:hover{
+    -webkit-appearance: none;
+    -webkit-box-shadow: 2px 2px 5px #bec8e4, -2px -2px 5px #fff  ;
     box-shadow: 2px 2px 5px #bec8e4, -2px -2px 5px #fff  ;
 }
 button:active{
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #bec8e4;
     box-shadow:inset -2px -2px 5px #fff, inset 2px 2px 5px #bec8e4;
 }
 
@@ -244,6 +254,9 @@ hr {
     height: 0.3rem;
     border-radius: 1rem;
     background: #e4ebf5;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset -3px -3px 5px #fff,inset 3px 3px 5px #bec8e4;
+    -webkit-box-shadow: inset -1px -1px 3px #fff,inset 1px 1px 3px #bec8e4;
     box-shadow: inset -3px -3px 5px #fff,inset 3px 3px 5px #bec8e4;
     box-shadow: inset -1px -1px 3px #fff,inset 1px 1px 3px #bec8e4;
 }
