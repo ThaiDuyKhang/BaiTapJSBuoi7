@@ -69,13 +69,12 @@ function filterPrime(){
 ///////////// bài tập 3 ///////////////
 function sumN() {
     var n = getEle("parameterN").value;
-    var s = 2;
+    var s = 0;
     var total;
 
-    for (var i = 3; i <= n; i++) {
+    for (var i = 2; i <= n; i++) {
       s += i;
     }
-
     total = s + 2 * parseFloat(n);
 
     getEle("printCountN").innerHTML = "Tổng (2 + 3 + 4 +..." + n + ") + 2 * " + n + " = " + total;
