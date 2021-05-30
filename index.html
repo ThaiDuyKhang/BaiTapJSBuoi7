@@ -112,6 +112,7 @@
                     <div class="left col-sm-12 col-md-7">
                         <span>n =</span>
                         <input type="text" value="1,2,3,4,5,6,7,8,9,10" id="prime">
+                        <button onclick="addPrime()">Thêm</button>
                         <button onclick="filterPrime()">Tìm</button>
                     </div>
                     <div class="right col-sm-12 col-md-5">
@@ -218,11 +219,11 @@
                 </div>
                 <div class="content row justify-content-center align-items-center">
                     <div class="left col-md-9 col-sm-12 col-lg-8">
-                        <input type="text" id="sumAnimal" placeholder="Nhập tổng chó & gà"><input type="text" id="legAnimal" placeholder="Nhập số chân">
-                        <button onclick="">Tìm</button>
+                        <input type="text" id="sumAnimal" value="36" placeholder="Nhập tổng chó & gà"><input type="text" id="legAnimal" value="100" placeholder="Nhập số chân">
+                        <button onclick="findDogsAndChickens()">Tìm</button>
                     </div>
                     <div class="right col-md-3 col-sm-12 col-lg-4">
-                        <p id=""  style="font-weight:600;"></p>
+                        <p id="printDogsAndChickens"  style="font-weight:600;"></p>
                     </div>
                 </div>
             </div>    

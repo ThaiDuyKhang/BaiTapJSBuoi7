@@ -2,7 +2,6 @@ function getEle(id) {
     return document.getElementById(id);
   }
 
-
 /////////// bài 1////////////////////
 function tableNumber(){
 var arrTableNumber = [];
@@ -20,31 +19,50 @@ getEle("printTableNumber").innerHTML = arrTableNumber.join("");
 getEle("printTableNumber").style.color = "#4463b9";
 }
 
+
 ///////////// bài 2 //////////////////
-function filterPrime() {
-    var filterPrime = [];
-    var prime = getEle("prime").value;
-    var flag = true;
+var primeList = [];
 
-    if (prime > 2){
-      flag = true;
-    } else {
-        for (var i = 2; i <= parseFloat(prime)/2; i++) {
-          if (prime % i === 0) {
-            flag = false;
-            return;
-          }
-        }
-      filterPrime.push(parseFloat(prime[i]));   
-      console.log(filterPrime);
+function addPrime() {
+  var prime = document.getElementById("prime").value;
+  var convertPrime = prime.split(",");
+  for (var i = 0; i < convertPrime.length; i++) {
+    primeList.push(parseFloat(convertPrime[i]));
+  }
+
+  console.log(primeList);
+}
+
+function checkPrime(n){
+  if(n < 2){
+      return false;
+  }else if(n === 2){
+      return true;
+  }else if(n > 2){
+      var k = 0;
+      for(var i = 2; i <= Math.sqrt(n); i++){
+          if(n % i === 0){
+              k++;
+          }        
       }
+      if(k === 0){
+          return true;
+      }
+      return false;
+  }
+}
 
-    if (flag == true){
-      getEle("printFilterPrime").innerHTML = "Số nguyên tố là: " + filterPrime;
-    }
-    if (flag == false){
-    }
-    getEle("printFilterPrime").style.color = "#4463b9";
+function filterPrime(){
+  var filterPrime = [];
+  for(var i = 0; i < primeList.length; i++){
+      primeList[i] = parseInt(primeList[i]);
+      if(checkPrime(primeList[i])){
+          filterPrime.push(" " + primeList[i]);
+      }
+  }
+  filterPrime.join(", ");
+  document.getElementById("printFilterPrime").innerHTML = "Các số nguyên tố là:" + filterPrime;
+  getEle("printFilterPrime").style.color = "#4463b9";
 }
 
 
@@ -134,12 +152,30 @@ function playCards(){
     arrThree.push( " " + cards[i+2]);
     arrFour.push( " " + cards[i+3]);
   }
-  getEle("players").innerHTML = "Player 1: " + arrOne + "<br>" + "Player 2: " + arrTwo + "<br>" + "Player 3: " + arrThree + "<br>" + "Player 4: " + arrFour;
+  getEle("players").innerHTML = 
+  "Player 1: " + arrOne + "<br>" + 
+  "Player 2: " + arrTwo + "<br>" + 
+  "Player 3: " + arrThree + "<br>" + 
+  "Player 4: " + arrFour;
   getEle("players").style.color = "#4463b9";
 }
 
 
 /////////////////// Bài 9 ////////////////////
+function findDogsAndChickens(){
+  var sum = getEle("sumAnimal").value;
+  var legs = getEle("legAnimal").value;
+// Nếu tất cả là chó thì tổng chân = số con * 4
+// Số gà  bằng số chân dư : 2 
+  var countChickens = ((parseFloat(sum) * 4) - legs) / 2;
+//Số chó bằng tổng số con - số gà
+  var countDogs = sum - countChickens;
+
+  getEle("printDogsAndChickens").innerHTML = 
+  "Chó: " + countDogs + " con" + "<br>" 
+  + "Gà: " + countChickens + " con";
+  getEle("printDogsAndChickens").style.color = "#4463b9";
+}
 
 /////////////////// Bài 10 ///////////////////
 function angleBetweenHoursAndMinutes(){
