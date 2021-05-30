@@ -91,7 +91,7 @@ function countSivisor() {
       }
     }
     // getEle("printDivisorN").innerHTML= n;
-    getEle("totalDivisorN").innerHTML = "Số lượng ước số của " + n +" là " + count;
+    getEle("totalDivisorN").innerHTML = "Ước số của " + n +" là " + count;
     getEle("totalDivisorN").style.color="#4463b9";
   }
 
